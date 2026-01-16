@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REWA Construction | Innovative Building Solutions</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0052CC',
+                            dark: '#003D99',
+                            gold: '#FFB61E',
+                            teal: '#00C1D4',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        tighter: '-0.04em',
+                        tight: '-0.02em',
+                    },
+                    boxShadow: {
+                        'glow': '0 0 40px -10px rgba(0, 193, 212, 0.3)',
+                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-feature-settings: "cv11", "ss01";
+            -webkit-font-smoothing: antialiased;
+            background: white;
+            overflow-x: hidden;
+        }
+        
+        .section-curve {
+            border-radius: 2.5rem;
+        }
+        
+        @media (min-width: 640px) {
+            .section-curve {
+                border-radius: 3rem;
+            }
+        }
+
+        /* WHITE BLUR NAVBAR - CHANGED FROM BLACK */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85) !important;
+            backdrop-filter: blur(12px) !important;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05) !important;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Logo SVG Styling */
+        .logo-svg {
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(10, 99, 176, 0.3);
+        }
+
+        /* MOBILE MENU - WHITE VERSION */
+        .mobile-menu {
+            position: fixed !important;
+            top: 0 !important;
+            right: -100% !important;
+            width: 300px !important;
+            height: 100vh !important;
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(15px) !important;
+            z-index: 1000 !important;
+            transition: right 0.3s ease-in-out !important;
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1) !important;
+            overflow-y: auto !important;
+        }
+        
+        .mobile-menu.open {
+            right: 0 !important;
+        }
+        
+        .mobile-overlay {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: rgba(0, 0, 0, 0.4) !important;
+            z-index: 999 !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            transition: all 0.3s ease-in-out !important;
+        }
+        
+        .mobile-overlay.open {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        /* Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Ensure proper spacing for fixed header */
+        main {
+            padding-top: 80px;
+        }
+
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+    </style>
+</head>
+<body class="text-gray-800 font-sans selection:bg-brand-teal selection:text-white">
+
+    <!-- Header - WHITE BLUR NAVBAR -->
+    <header class="fixed top-0 w-full z-50 transition-all duration-300 glass-panel">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo - SVG LOGO REPLACED -->
+                <a href="#home" class="group flex items-center gap-3">
+                    <div class="logo-svg">
+                        <svg
+                            width="45"
+                            height="45"
+                            viewBox="0 0 300 300"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <!-- Background -->
+                            <rect width="300" height="300" fill="#0A63B0"/>
+                            <!-- Circle Border -->
+                            <circle
+                                cx="150"
+                                cy="150"
+                                r="90"
+                                fill="none"
+                                stroke="#9FE3F3"
+                                stroke-width="10"
+                            />
+                            <!-- Letter R -->
+                            <text
+                                x="150"
+                                y="185"
+                                text-anchor="middle"
+                                font-size="120"
+                                font-family="Arial, Helvetica, sans-serif"
+                                font-weight="700"
+                                fill="#9FE3F3"
+                            >
+                                R
+                            </text>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-heading font-bold text-xl tracking-tighter text-[#9FE3F3] leading-none">REWA</span>
+                        <span class="text-[0.65rem] font-semibold tracking-widest text-[#9FE3F3] uppercase mt-0.5">Construction</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav - DARK TEXT FOR WHITE NAVBAR -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="text-sm font-medium text-gray-700 hover:text-brand-blue transition-colors duration-200">Home</a>
+                    <a href="#about" class="text-sm font-medium text-gray-700 hover:text-brand-blue transition-colors duration-200">About</a>
+                    <a href="#services" class="text-sm font-medium text-gray-700 hover:text-brand-blue transition-colors duration-200">Services</a>
+                    <a href="#projects" class="text-sm font-medium text-gray-700 hover:text-brand-blue transition-colors duration-200">Projects</a>
+                    <a href="#why-choose" class="text-sm font-medium text-gray-700 hover:text-brand-blue transition-colors duration-200">Why Choose Us</a>
+                    <a href="#methods" class="text-sm font-medium text-gray-700 hover:text-brand-blue transition-colors duration-200">Methods</a>
+                    <a href="#contact" class="px-5 py-2.5 rounded-full bg-brand-blue text-white text-sm font-bold shadow-lg shadow-brand-blue/30 hover:translate-y-[-2px] hover:shadow-xl hover:bg-brand-dark transition-all duration-300 flex items-center gap-2">
+                        Get Quote
+                        <span class="iconify" data-icon="lucide:arrow-right" data-width="14"></span>
+                    </a>
+                </nav>
+
+                <!-- Mobile Toggle - DARK ICON -->
+                <button id="mobileMenuToggle" class="md:hidden text-gray-700 p-2">
+                    <span id="menuIcon" class="iconify" data-icon="lucide:menu" data-width="24"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobileOverlay" class="mobile-overlay md:hidden"></div>
+
+        <!-- Mobile Menu - WHITE VERSION -->
+        <div id="mobileMenu" class="mobile-menu md:hidden">
+            <div class="h-full flex flex-col">
+                <!-- Menu Header -->
+                <div class="flex justify-between items-center p-6 border-b border-gray-200 bg-white/80">
+                    <div class="flex items-center gap-3">
+                        <div class="logo-svg w-10 h-10">
+                            <svg
+                                width="40"
+                                height="40"
+                                viewBox="0 0 300 300"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <rect width="300" height="300" fill="#0A63B0"/>
+                                <circle
+                                    cx="150"
+                                    cy="150"
+                                    r="90"
+                                    fill="none"
+                                    stroke="#9FE3F3"
+                                    stroke-width="10"
+                                />
+                                <text
+                                    x="150"
+                                    y="185"
+                                    text-anchor="middle"
+                                    font-size="120"
+                                    font-family="Arial, Helvetica, sans-serif"
+                                    font-weight="700"
+                                    fill="#9FE3F3"
+                                >
+                                    R
+                                </text>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="font-heading font-bold text-lg tracking-tight block leading-none text-[#9FE3F3]">REWA</span>
+                            <span class="text-xs text-[#9FE3F3] font-semibold tracking-widest">CONSTRUCTION</span>
+                        </div>
+                    </div>
+                    <button id="closeMenu" class="text-gray-700 p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                        <span class="iconify" data-icon="lucide:x" data-width="24"></span>
+                    </button>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="flex-1 p-6">
+                    <nav class="space-y-2">
+                        <a href="#home" class="block text-lg font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-100 transition-colors duration-200 py-3 px-4 rounded-lg" onclick="closeMobileMenu()">
+                            <span class="iconify inline mr-3" data-icon="lucide:home" data-width="18"></span>
+                            Home
+                        </a>
+                        <a href="#about" class="block text-lg font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-100 transition-colors duration-200 py-3 px-4 rounded-lg" onclick="closeMobileMenu()">
+                            <span class="iconify inline mr-3" data-icon="lucide:info" data-width="18"></span>
+                            About
+                        </a>
+                        <a href="#services" class="block text-lg font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-100 transition-colors duration-200 py-3 px-4 rounded-lg" onclick="closeMobileMenu()">
+                            <span class="iconify inline mr-3" data-icon="lucide:briefcase" data-width="18"></span>
+                            Services
+                        </a>
+                        <a href="#projects" class="block text-lg font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-100 transition-colors duration-200 py-3 px-4 rounded-lg" onclick="closeMobileMenu()">
+                            <span class="iconify inline mr-3" data-icon="lucide:folder" data-width="18"></span>
+                            Projects
+                        </a>
+                        <a href="#why-choose" class="block text-lg font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-100 transition-colors duration-200 py-3 px-4 rounded-lg" onclick="closeMobileMenu()">
+                            <span class="iconify inline mr-3" data-icon="lucide:star" data-width="18"></span>
+                            Why Choose Us
+                        </a>
+                        <a href="#methods" class="block text-lg font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-100 transition-colors duration-200 py-3 px-4 rounded-lg" onclick="closeMobileMenu()">
+                            <span class="iconify inline mr-3" data-icon="lucide:cpu" data-width="18"></span>
+                            Methods
+                        </a>
+                    </nav>
+                    
+                    <!-- Get Quote Button -->
+                    <a href="#contact" class="block mt-8 px-6 py-4 rounded-xl bg-brand-blue text-white font-bold text-center shadow-lg hover:bg-brand-dark hover:text-white transition-all duration-300" onclick="closeMobileMenu()">
+                        Get Quote
+                        <span class="iconify inline ml-2" data-icon="lucide:arrow-right" data-width="16"></span>
+                    </a>
+                    
+                    <!-- Contact Info -->
+                    <div class="mt-12 pt-8 border-t border-gray-200">
+                        <h4 class="text-gray-900 font-semibold mb-4">Contact Info</h4>
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <div class="flex items-center gap-3">
+                                <span class="iconify text-brand-blue" data-icon="lucide:phone" data-width="16"></span>
+                                <span> +91 9584793747</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="iconify text-brand-blue" data-icon="lucide:mail" data-width="16"></span>
+                                <span>info@rewaconstruction.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div class="p-6 border-t border-gray-200 bg-white/80">
+                    <div class="flex justify-center gap-6">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-brand-blue hover:text-white transition-colors duration-200">
+                            <span class="iconify" data-icon="lucide:facebook" data-width="16"></span>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-brand-blue hover:text-white transition-colors duration-200">
+                            <span class="iconify" data-icon="lucide:twitter" data-width="16"></span>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-brand-blue hover:text-white transition-colors duration-200">
+                            <span class="iconify" data-icon="lucide:linkedin" data-width="16"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- YOUR EXISTING MAIN CONTENT STARTS HERE -->
+    <main class="pt-20 pb-12 space-y-8">
+
+        <!-- Hero Section -->
+        <section id="home" class="max-w-7xl mx-auto px-4 sm:px-6 pt-6">
+            <div class="section-curve overflow-hidden relative min-h-[90vh] reveal">
+                <!-- Full background image -->
+                <div class="absolute inset-0">
+                    <img src="./hero.jpg" 
+                         class="w-full h-full object-cover" alt="Construction Site">
+                </div>
+                
+                <!-- Content overlay -->
+                <div class="relative z-10 h-full flex items-center px-4 sm:px-12 lg:pl-20 py-20 lg:py-0">
+                    <div class="max-w-2xl">
+                        <div class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-8">
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse"></span>
+                            <span class="text-xs font-semibold tracking-widest text-white uppercase">Building Tomorrow</span>
+                        </div>
+                        
+                        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold text-white tracking-tight leading-[1.1] mb-6">
+                            Innovative <br/>
+                            <span class="text-white">Construction</span> <br/>
+                            Solutions
+                        </h1>
+                        
+                        <p class="text-lg text-blue-100/90 max-w-lg mb-10 leading-relaxed font-light">
+                            We combine cutting-edge technology with sustainable practices to deliver landmarks that stand the test of time.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#contact" class="group px-7 py-3.5 rounded-full bg-white text-brand-dark font-bold text-sm hover:bg-brand-gold transition-colors duration-300 flex items-center gap-2 shadow-lg">
+                                Start Project
+                                <span class="iconify group-hover:translate-x-1 transition-transform" data-icon="lucide:arrow-right" data-width="16"></span>
+                            </a>
+                            <a href="#projects" class="px-7 py-3.5 rounded-full border border-white/30 text-white font-medium text-sm hover:bg-white/10 transition-colors duration-300 flex items-center gap-2">
+                                View Work
+                                <span class="iconify" data-icon="lucide:eye" data-width="16"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section - WITH YOUR SVG LOGO -->
+        <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 pt-8">
+            <div class="section-curve bg-gradient-to-br from-brand-dark to-brand-blue p-6 md:p-12 reveal">
+                <div class="text-center mb-12">
+                    <h2 class="font-heading text-3xl sm:text-4xl font-semibold text-white tracking-tight mb-4">
+                        About <span class="relative inline-block text-brand-teal">Us<span class="absolute bottom-1 left-0 w-full h-[3px] bg-brand-gold/50 rounded-full"></span></span>
+                    </h2>
+                    <p class="text-blue-100/80 max-w-2xl mx-auto text-lg">Building excellence with integrity, innovation, and sustainable practices.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Side - Your SVG Logo -->
+                    <div class="relative flex justify-center items-center">
+                        <div class="w-full max-w-md rounded-3xl overflow-hidden shadow-2xl shadow-brand-blue/30 bg-white/5 p-8 border-4 border-white/20">
+                            <svg
+                                width="100%"
+                                height="100%"
+                                viewBox="0 0 600 600"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <!-- Background -->
+                                <rect width="600" height="600" fill="#0A63B0"/>
+
+                                <!-- Circle -->
+                                <circle
+                                    cx="300"
+                                    cy="190"
+                                    r="95"
+                                    fill="none"
+                                    stroke="#9FE3F3"
+                                    stroke-width="12"
+                                />
+
+                                <!-- R Letter -->
+                                <text
+                                    x="300"
+                                    y="230"
+                                    text-anchor="middle"
+                                    font-size="140"
+                                    font-family="Arial, Helvetica, sans-serif"
+                                    font-weight="700"
+                                    fill="#9FE3F3"
+                                >
+                                    R
+                                </text>
+
+                                <!-- REWA -->
+                                <text
+                                    x="300"
+                                    y="380"
+                                    text-anchor="middle"
+                                    font-size="110"
+                                    font-family="Arial, Helvetica, sans-serif"
+                                    font-weight="700"
+                                    letter-spacing="18"
+                                    fill="#BFEAF6"
+                                >
+                                    REWA
+                                </text>
+
+                                <!-- CONSTRUCTION -->
+                                <text
+                                    x="300"
+                                    y="450"
+                                    text-anchor="middle"
+                                    font-size="36"
+                                    font-family="Arial, Helvetica, sans-serif"
+                                    letter-spacing="10"
+                                    fill="#9FE3F3"
+                                >
+                                    CONSTRUCTION
+                                </text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Text Content EXACTLY FROM YOUR FILE -->
+                    <div class="text-white space-y-6">
+                        <div class="text-center lg:text-left">
+                            <h3 class="text-4xl font-bold mb-4 tracking-tight font-heading">
+                                WELCOME TO<br/>
+                                <span class="text-brand-teal">REWA</span><br/>
+                                CONSTRUCTION!
+                            </h3>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <p class="text-blue-100 text-lg leading-relaxed">
+                                At REWA Construction, we specialize in industrial construction with a focus on delivering high-quality results through a client-centric approach. Our core principles—Safety, Quality, and Speed—define our work ethic and our commitment to "Do It Right, First Time!"
+                            </p>
+                            
+                            <p class="text-blue-100 text-lg leading-relaxed">
+                                We prioritize safety to achieve incident-free projects and boast a track record of timely project completion that supports clients' business goals.
+                            </p>
+                        </div>
+                        
+                        <!-- Safety, Quality and Speed emphasized -->
+                        <div class="pt-6">
+                            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20">
+                                <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+                                <span class="text-lg font-bold text-white">Safety, Quality and Speed!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 pt-8">
+            <div class="section-curve bg-gradient-to-br from-brand-dark to-brand-blue p-6 md:p-12 reveal">
+                <div class="text-center mb-12">
+                    <h2 class="font-heading text-3xl sm:text-4xl font-semibold text-white tracking-tight mb-4">
+                        Our <span class="relative inline-block text-brand-teal">Services<span class="absolute bottom-1 left-0 w-full h-[3px] bg-brand-gold/50 rounded-full"></span></span>
+                    </h2>
+                    <p class="text-blue-100/80 max-w-2xl mx-auto text-lg">Comprehensive engineering and construction solutions tailored for modern city development.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1: Residential Construction -->
+                    <div class="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-white/10 mb-6 flex items-center justify-center text-white group-hover:bg-brand-teal group-hover:text-white transition-colors duration-300">
+                            <span class="iconify" data-icon="lucide:home" data-width="28" data-stroke-width="1.5"></span>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-white mb-2">Residential Construction</h3>
+                        <p class="text-sm text-blue-100/70 mb-6 leading-relaxed">Custom homes, apartments, and residential complexes with modern amenities.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-blue-100">
+                                <span class="iconify text-brand-teal mt-0.5" data-icon="lucide:check-circle-2" data-width="16"></span>
+                                Custom Home Building
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-blue-100">
+                                <span class="iconify text-brand-teal mt-0.5" data-icon="lucide:check-circle-2" data-width="16"></span>
+                                Apartment Complexes
+                            </li>
+                        </ul>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-brand-teal hover:text-white group-hover:underline decoration-2 underline-offset-4">
+                            Learn more <span class="iconify ml-1" data-icon="lucide:arrow-right" data-width="14"></span>
+                        </a>
+                    </div>
+
+                    <!-- Card 2: Commercial Construction -->
+                    <div class="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-white/10 mb-6 flex items-center justify-center text-white group-hover:bg-brand-teal group-hover:text-white transition-colors duration-300">
+                            <span class="iconify" data-icon="lucide:building" data-width="28" data-stroke-width="1.5"></span>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-white mb-2">Commercial Construction</h3>
+                        <p class="text-sm text-blue-100/70 mb-6 leading-relaxed">Office buildings, retail spaces, and commercial complexes for businesses.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-blue-100">
+                                <span class="iconify text-brand-teal mt-0.5" data-icon="lucide:check-circle-2" data-width="16"></span>
+                                Office Buildings
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-blue-100">
+                                <span class="iconify text-brand-teal mt-0.5" data-icon="lucide:check-circle-2" data-width="16"></span>
+                                Retail Spaces
+                            </li>
+                        </ul>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-brand-teal hover:text-white group-hover:underline decoration-2 underline-offset-4">
+                            Learn more <span class="iconify ml-1" data-icon="lucide:arrow-right" data-width="14"></span>
+                        </a>
+                    </div>
+
+                    <!-- Card 3: RCC Work -->
+                    <div class="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-white/10 mb-6 flex items-center justify-center text-white group-hover:bg-brand-teal group-hover:text-white transition-colors duration-300">
+                            <span class="iconify" data-icon="fluent:building-24-regular" data-width="28"></span>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-white mb-2">RCC Work</h3>
+                        <p class="text-sm text-blue-100/70 mb-6 leading-relaxed">Reinforced Cement Concrete structures with superior strength and durability.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-blue-100">
+                                <span class="iconify text-brand-teal mt-0.5" data-icon="lucide:check-circle-2" data-width="16"></span>
+                                Structural Framing
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-blue-100">
+                                <span class="iconify text-brand-teal mt-0.5" data-icon="lucide:check-circle-2" data-width="16"></span>
+                                Foundation Work
+                            </li>
+                        </ul>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-brand-teal hover:text-white group-hover:underline decoration-2 underline-offset-4">
+                            Learn more <span class="iconify ml-1" data-icon="lucide:arrow-right" data-width="14"></span>
+                        </a>
+                    </div>
+
+                    <!-- Card 4: Waterproofing -->
+                    <div class="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-white/10 mb-6 flex items-center justify-center text-white group-hover:bg-brand-teal group-hover:text-white transition-colors duration-300">
+                            <span class="iconify" data-icon="lucide:droplets" data-width="28" data-stroke-width="1.5"></span>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-white mb-2">Waterproofing</h3>
+                        <p class="text-sm text-blue-100/70 mb-6 leading-relaxed">Comprehensive waterproofing solutions for basements, roofs, and terraces.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-blue-100">
+                                <span class="iconify text-brand-teal mt-0.5" data-icon="lucide:check-circle-2" data-width="16"></span>
+                                Terrace Waterproofing
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-blue-100">
+                                <span class="iconify text-brand-teal mt-0.5" data-icon="lucide:check-circle-2" data-width="16"></span>
+                                Basement Protection
+                            </li>
+                        </ul>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-brand-teal hover:text-white group-hover:underline decoration-2 underline-offset-4">
+                            Learn more <span class="iconify ml-1" data-icon="lucide:arrow-right" data-width="14"></span>
+                        </a>
+                    </div>
+
+                    <!-- Card 5: Renovation -->
+                    <div class="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-white/10 mb-6 flex items-center justify-center text-white group-hover:bg-brand-teal group-hover:text-white transition-colors duration-300">
+                            <span class="iconify" data-icon="lucide:refresh-cw" data-width="28" data-stroke-width="1.5"></span>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-white mb-2">Renovation</h3>
+                        <p class="text-sm text-blue-100/70 mb-6 leading-relaxed">Transform existing spaces with modern design and updated functionality.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-blue-100">
+                                <span class="iconify text-brand-teal mt-0.5" data-icon="lucide:check-circle-2" data-width="16"></span>
+                                Home Remodeling
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-blue-100">
+                                <span class="iconify text-brand-teal mt-0.5" data-icon="lucide:check-circle-2" data-width="16"></span>
+                                Office Upgrades
+                            </li>
+                        </ul>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-brand-teal hover:text-white group-hover:underline decoration-2 underline-offset-4">
+                            Learn more <span class="iconify ml-1" data-icon="lucide:arrow-right" data-width="14"></span>
+                        </a>
+                    </div>
+
+                    <!-- Card 6: Interior & Exterior -->
+                    <div class="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-white/10 mb-6 flex items-center justify-center text-white group-hover:bg-brand-teal group-hover:text-white transition-colors duration-300">
+                            <span class="iconify" data-icon="lucide:paintbrush" data-width="28" data-stroke-width="1.5"></span>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-white mb-2">Interior & Exterior</h3>
+                        <p class="text-sm text-blue-100/70 mb-6 leading-relaxed">Complete design and finishing for both indoor and outdoor spaces.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-blue-100">
+                                <span class="iconify text-brand-teal mt-0.5" data-icon="lucide:check-circle-2" data-width="16"></span>
+                                Interior Design
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-blue-100">
+                                <span class="iconify text-brand-teal mt-0.5" data-icon="lucide:check-circle-2" data-width="16"></span>
+                                Exterior Finishing
+                            </li>
+                        </ul>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-brand-teal hover:text-white group-hover:underline decoration-2 underline-offset-4">
+                            Learn more <span class="iconify ml-1" data-icon="lucide:arrow-right" data-width="14"></span>
+                        </a>
+                    </div>
+
+                    <!-- Card 7: Turnkey Projects -->
+                    <div class="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-white/10 mb-6 flex items-center justify-center text-white group-hover:bg-brand-teal group-hover:text-white transition-colors duration-300">
+                            <span class="iconify" data-icon="lucide:key" data-width="28" data-stroke-width="1.5"></span>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-white mb-2">Turnkey Projects</h3>
+                        <p class="text-sm text-blue-100/70 mb-6 leading-relaxed">End-to-end project delivery from concept to completion.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-blue-100">
+                                <span class="iconify text-brand-teal mt-0.5" data-icon="lucide:check-circle-2" data-width="16"></span>
+                                Complete Solutions
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-blue-100">
+                                <span class="iconify text-brand-teal mt-0.5" data-icon="lucide:check-circle-2" data-width="16"></span>
+                                Single Point Contact
+                            </li>
+                        </ul>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-brand-teal hover:text-white group-hover:underline decoration-2 underline-offset-4">
+                            Learn more <span class="iconify ml-1" data-icon="lucide:arrow-right" data-width="14"></span>
+                        </a>
+                    </div>
+
+                    <!-- Card 8: Structural Repair -->
+                    <div class="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-white/10 mb-6 flex items-center justify-center text-white group-hover:bg-brand-teal group-hover:text-white transition-colors duration-300">
+                            <span class="iconify" data-icon="lucide:wrench" data-width="28" data-stroke-width="1.5"></span>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-white mb-2">Structural Repair</h3>
+                        <p class="text-sm text-blue-100/70 mb-6 leading-relaxed">Restoration and strengthening of existing structures for safety and longevity.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-blue-100">
+                                <span class="iconify text-brand-teal mt-0.5" data-icon="lucide:check-circle-2" data-width="16"></span>
+                                Crack Repair
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-blue-100">
+                                <span class="iconify text-brand-teal mt-0.5" data-icon="lucide:check-circle-2" data-width="16"></span>
+                                Structural Strengthening
+                            </li>
+                        </ul>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-brand-teal hover:text-white group-hover:underline decoration-2 underline-offset-4">
+                            Learn more <span class="iconify ml-1" data-icon="lucide:arrow-right" data-width="14"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-choose" class="max-w-7xl mx-auto px-4 sm:px-6 pt-8">
+            <div class="section-curve bg-gradient-to-br from-brand-dark to-brand-blue p-6 md:p-12 reveal">
+                <div class="text-center mb-12">
+                    <h2 class="font-heading text-3xl sm:text-4xl font-semibold text-white tracking-tight mb-4">
+                        Why <span class="relative inline-block text-brand-teal">Choose Us<span class="absolute bottom-1 left-0 w-full h-[3px] bg-brand-gold/50 rounded-full"></span></span>
+                    </h2>
+                    <p class="text-blue-100/80 max-w-2xl mx-auto text-lg">Discover what sets REWA Construction apart in delivering exceptional building solutions.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Reason 1 -->
+                    <div class="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-white/10 mb-6 flex items-center justify-center text-white group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
+                            <span class="iconify" data-icon="lucide:award" data-width="28" data-stroke-width="1.5"></span>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-white mb-2">Proven Excellence</h3>
+                        <p class="text-sm text-blue-100/70 leading-relaxed">25+ years of industry experience with award-winning project delivery and client satisfaction.</p>
+                    </div>
+
+                    <!-- Reason 2 -->
+                    <div class="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-white/10 mb-6 flex items-center justify-center text-white group-hover:bg-brand-teal group-hover:text-white transition-colors duration-300">
+                            <span class="iconify" data-icon="lucide:users" data-width="28" data-stroke-width="1.5"></span>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-white mb-2">Expert Team</h3>
+                        <p class="text-sm text-blue-100/70 leading-relaxed">Certified architects, engineers, and project managers dedicated to your vision.</p>
+                    </div>
+
+                    <!-- Reason 3 -->
+                    <div class="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-white/10 mb-6 flex items-center justify-center text-white group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
+                            <span class="iconify" data-icon="lucide:shield-check" data-width="28" data-stroke-width="1.5"></span>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-white mb-2">Quality Assurance</h3>
+                        <p class="text-sm text-blue-100/70 leading-relaxed">Rigorous quality checks and adherence to international construction standards.</p>
+                    </div>
+
+                    <!-- Reason 4 -->
+                    <div class="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-white/10 mb-6 flex items-center justify-center text-white group-hover:bg-brand-teal group-hover:text-white transition-colors duration-300">
+                            <span class="iconify" data-icon="lucide:clock" data-width="28" data-stroke-width="1.5"></span>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-white mb-2">On-Time Delivery</h3>
+                        <p class="text-sm text-blue-100/70 leading-relaxed">98% of projects completed within scheduled timelines using advanced project management.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 pt-8">
+            <div class="section-curve bg-gradient-to-br from-brand-dark to-brand-blue p-6 md:p-12 reveal">
+                <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <div>
+                        <h2 class="font-heading text-3xl sm:text-4xl font-semibold text-white tracking-tight mb-2">
+                            Featured <span class="text-brand-teal">Projects</span>
+                        </h2>
+                        <p class="text-blue-100/80">Explore our portfolio of landmarks.</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="document.getElementById('projectScroll').scrollBy({left: -400, behavior: 'smooth'})" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+                            <span class="iconify" data-icon="lucide:arrow-left" data-width="18"></span>
+                        </button>
+                        <button onclick="document.getElementById('projectScroll').scrollBy({left: 400, behavior: 'smooth'})" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+                            <span class="iconify" data-icon="lucide:arrow-right" data-width="18"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="projectScroll" class="flex overflow-x-auto gap-6 pb-6 snap-x hide-scrollbar">
+                    <!-- Project 1 -->
+                    <div class="min-w-[85vw] md:min-w-[500px] snap-center relative group rounded-3xl overflow-hidden aspect-[4/3] cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Office Complex">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent opacity-100"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <div class="inline-block px-3 py-1 rounded-full bg-brand-gold/20 backdrop-blur-md border border-brand-gold/30 text-brand-gold text-xs font-bold uppercase tracking-wider mb-3">Commercial</div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Horizon Office Complex</h3>
+                            <p class="text-blue-100/80 text-sm line-clamp-2">A 20-story sustainable office building featuring smart technology and green spaces in downtown.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="min-w-[85vw] md:min-w-[500px] snap-center relative group rounded-3xl overflow-hidden aspect-[4/3] cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Residential">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent opacity-100"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <div class="inline-block px-3 py-1 rounded-full bg-brand-gold/20 backdrop-blur-md border border-brand-gold/30 text-brand-gold text-xs font-bold uppercase tracking-wider mb-3">Residential</div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Azure Luxury Towers</h3>
+                            <p class="text-blue-100/80 text-sm line-clamp-2">Twin towers with premium amenities, panoramic city views, and energy-efficient systems.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="min-w-[85vw] md:min-w-[500px] snap-center relative group rounded-3xl overflow-hidden aspect-[4/3] cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Mall">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent opacity-100"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <div class="inline-block px-3 py-1 rounded-full bg-brand-gold/20 backdrop-blur-md border border-brand-gold/30 text-brand-gold text-xs font-bold uppercase tracking-wider mb-3">Retail</div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Metro Shopping Center</h3>
+                            <p class="text-blue-100/80 text-sm line-clamp-2">Expansion of retail space with modern architectural elements and improved flow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Construction Methods Section -->
+        <section id="methods" class="max-w-7xl mx-auto px-4 sm:px-6 pt-8">
+            <div class="section-curve bg-gradient-to-br from-brand-dark to-brand-blue p-6 md:p-12 lg:p-16 relative overflow-hidden reveal">
+                <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px] opacity-5"></div>
+                
+                <div class="relative z-10 grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 shadow-sm mb-6 backdrop-blur-sm">
+                            <span class="iconify text-brand-teal" data-icon="lucide:cpu" data-width="14"></span>
+                            <span class="text-xs font-bold text-white uppercase tracking-widest">Advanced Tech</span>
+                        </div>
+                        
+                        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-white tracking-tight mb-6">
+                            Smart Construction <br/><span class="text-brand-teal">Methodologies</span>
+                        </h2>
+                        <p class="text-blue-100/80 text-lg mb-10">
+                            We employ cutting-edge construction techniques and technologies to deliver superior quality, efficiency, and durability in every project.
+                        </p>
+
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <!-- Method Item -->
+                            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-sm border border-white/10">
+                                <span class="iconify text-brand-teal mb-3" data-icon="lucide:box" data-width="32"></span>
+                                <h4 class="font-semibold text-white mb-1">Modular Construction</h4>
+                                <p class="text-xs text-blue-100/70">Pre-fabricated modules for faster completion.</p>
+                            </div>
+                            <!-- Method Item -->
+                            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-sm border border-white/10">
+                                <span class="iconify text-brand-teal mb-3" data-icon="lucide:printer" data-width="32"></span>
+                                <h4 class="font-semibold text-white mb-1">3D Printing</h4>
+                                <p class="text-xs text-blue-100/70">Complex architectural elements tailored precisely.</p>
+                            </div>
+                            <!-- Method Item -->
+                            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-sm border border-white/10">
+                                <span class="iconify text-green-400 mb-3" data-icon="lucide:leaf" data-width="32"></span>
+                                <h4 class="font-semibold text-white mb-1">Green Building</h4>
+                                <p class="text-xs text-blue-100/70">Sustainable materials and energy efficiency.</p>
+                            </div>
+                            <!-- Method Item -->
+                            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-sm border border-white/10">
+                                <span class="iconify text-brand-gold mb-3" data-icon="lucide:smartphone" data-width="32"></span>
+                                <h4 class="font-semibold text-white mb-1">Smart Structures</h4>
+                                <p class="text-xs text-blue-100/70">IoT integration for intelligent management.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="aspect-square rounded-[2rem] overflow-hidden shadow-2xl shadow-brand-blue/20 border-4 border-white/20">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Advanced Construction" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8">
+            <div class="section-curve bg-gradient-to-br from-brand-dark to-brand-blue p-6 md:p-12 reveal">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/10">
+                    <div class="text-center">
+                        <div class="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-tight">480+</div>
+                        <div class="text-sm font-medium text-blue-100/80 uppercase tracking-wide">Projects Completed</div>
+                    </div>
+                    <div class="text-center pl-8">
+                        <div class="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-tight">350+</div>
+                        <div class="text-sm font-medium text-blue-100/80 uppercase tracking-wide">Satisfied Clients</div>
+                    </div>
+                    <div class="text-center pl-8">
+                        <div class="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-tight">25+</div>
+                        <div class="text-sm font-medium text-blue-100/80 uppercase tracking-wide">Years Active</div>
+                    </div>
+                    <div class="text-center pl-8">
+                        <div class="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-tight">98%</div>
+                        <div class="text-sm font-medium text-blue-100/80 uppercase tracking-wide">Client Retention</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 pt-8">
+            <div class="section-curve bg-gradient-to-br from-brand-dark to-brand-blue p-8 md:p-16 text-center text-white shadow-2xl shadow-brand-blue/30 relative overflow-hidden reveal">
+                <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px] opacity-10"></div>
+                
+                <div class="relative z-10">
+                    <h2 class="font-heading text-3xl md:text-4xl font-semibold mb-6 tracking-tight">Ready To Build Your Vision?</h2>
+                    <p class="text-blue-100 text-lg mb-10 max-w-xl mx-auto">Contact us today for a personalized consultation and quote for your next construction project.</p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="tel:+919584793747" class="w-full sm:w-auto px-8 py-3.5 bg-white text-brand-dark font-bold rounded-full hover:bg-brand-gold hover:text-brand-dark transition-colors duration-300 flex items-center justify-center gap-2 shadow-lg">
+                            <span class="iconify" data-icon="lucide:phone" data-width="18"></span>
+                            +91 9584793747
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 bg-transparent border-2 border-white/20 text-white font-semibold rounded-full hover:bg-white/10 transition-colors duration-300 flex items-center justify-center gap-2">
+                            <span class="iconify" data-icon="lucide:mail" data-width="18"></span>
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-16 border-t border-slate-800 mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6 text-white">
+                        <div class="logo-svg w-8 h-8">
+                            <svg
+                                width="32"
+                                height="32"
+                                viewBox="0 0 300 300"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <rect width="300" height="300" fill="#0A63B0"/>
+                                <circle
+                                    cx="150"
+                                    cy="150"
+                                    r="90"
+                                    fill="none"
+                                    stroke="#9FE3F3"
+                                    stroke-width="10"
+                                />
+                                <text
+                                    x="150"
+                                    y="185"
+                                    text-anchor="middle"
+                                    font-size="120"
+                                    font-family="Arial, Helvetica, sans-serif"
+                                    font-weight="700"
+                                    fill="#9FE3F3"
+                                >
+                                    R
+                                </text>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="font-heading font-bold text-lg tracking-tight block leading-none">REWA</span>
+                            <span class="text-[0.6rem] text-brand-teal font-semibold tracking-widest">CONSTRUCTION</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                        From concept to completion, we transform visions into architectural reality with innovation, precision, and sustainability.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-teal hover:text-white transition-colors">
+                            <span class="iconify" data-icon="lucide:facebook" data-width="16"></span>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-teal hover:text-white transition-colors">
+                            <span class="iconify" data-icon="lucide:twitter" data-width="16"></span>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-teal hover:text-white transition-colors">
+                            <span class="iconify" data-icon="lucide:linkedin" data-width="16"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#home" class="hover:text-brand-teal transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-brand-teal transition-colors">About</a></li>
+                        <li><a href="#services" class="hover:text-brand-teal transition-colors">Services</a></li>
+                        <li><a href="#projects" class="hover:text-brand-teal transition-colors">Projects</a></li>
+                        <li><a href="#why-choose" class="hover:text-brand-teal transition-colors">Why Choose Us</a></li>
+                        <li><a href="#methods" class="hover:text-brand-teal transition-colors">Methods</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Contact</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="iconify text-brand-teal shrink-0 mt-0.5" data-icon="lucide:map-pin" data-width="16"></span>
+                            4F- 407 Rang Platinum,<br>Dahej, bypass-Road, bharuch, Gujarat, 392001
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="iconify text-brand-teal shrink-0" data-icon="lucide:phone" data-width="16"></span>
+                            +91 9584793747
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="iconify text-brand-teal shrink-0" data-icon="lucide:mail" data-width="16"></span>
+                            info@rewaconstruction.com
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Working Hours</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex justify-between">
+                            <span>Mon - Fri:</span>
+                            <span class="text-white">8:00 AM - 6:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Saturday:</span>
+                            <span class="text-white">9:00 AM - 2:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sunday:</span>
+                            <span class="text-brand-gold">Closed</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <p>&copy; 2023 REWA Construction. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Functionality - SIMPLE AND WORKING
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const closeMenu = document.getElementById('closeMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('open');
+            mobileOverlay.classList.toggle('open');
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+            
+            // Change menu icon
+            if (mobileMenu.classList.contains('open')) {
+                menuIcon.setAttribute('data-icon', 'lucide:x');
+            } else {
+                menuIcon.setAttribute('data-icon', 'lucide:menu');
+            }
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            mobileOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+            menuIcon.setAttribute('data-icon', 'lucide:menu');
+        }
+
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        closeMenu.addEventListener('click', closeMobileMenu);
+        mobileOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close menu when clicking on mobile nav links
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    closeMobileMenu();
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Reveal animations on scroll
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+
+</body>
+</html>
